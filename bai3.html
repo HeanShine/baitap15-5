@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form>
+    <h2> Nhap 3 so nguyen. In ra so Max </h2>
+
+
+    <input type="text" id="inputOne" placeholder="nhap so nguyen thu 1"> <br>
+    <input type="text" id="inputTwo" placeholder="nhap so nguyen thu 2"> <br>
+    <input type="text" id="inputThree" placeholder="nhap so nguyen thu 3"> <br>
+
+    <input type="button" value="send" onclick="outputNumber()">
+    <p id="result"> day la ket qua </p>
+</form>
+<script>
+
+    function outputNumber() {
+        let outputOne = parseInt(document.getElementById("inputOne").value)
+        let outputTwo = parseInt(document.getElementById("inputTwo").value)
+        let outputThree = parseInt(document.getElementById("inputThree").value)
+        if(outputOne > outputTwo && outputOne > outputThree) {
+            document.getElementById("result").innerHTML = outputOne
+        } else if (outputTwo > outputOne && outputTwo > outputThree) {
+            document.getElementById("result").innerHTML = outputTwo
+        } else {
+            document.getElementById("result").innerHTML = outputThree
+        }
+    }
+</script>
+</body>
+</html>
